@@ -529,7 +529,7 @@ source = { editable = "." }
 dependencies = [
     { name = "lxml", extra = ["html-clean"] },
     { name = "odoo" },
-    { name = "odoo-addon-mis-builder" },
+    { name = "odoo-addon-mis-builder-budget" },
     { name = "setuptools" },
     { name = "werkzeug" },
 ]
@@ -538,7 +538,7 @@ dependencies = [
 requires-dist = [
     { name = "lxml", extras = ["html-clean"], specifier = ">=5.2" },
     { name = "odoo", git = "https://github.com/OCA/OCB?branch=17.0" },
-    { name = "odoo-addon-mis-builder", specifier = ">=17.0.dev0,<17.1.dev0" },
+    { name = "odoo-addon-mis-builder-budget", specifier = ">=17.0.dev0,<17.1.dev0" },
     { name = "setuptools", specifier = "<71" },
     { name = "werkzeug", specifier = "==3.0.*" },
 ]
@@ -611,6 +611,18 @@ dependencies = [
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ba/e5/de4c9e35308b46ebbef2de6766c0ba7d917977201732ba87ba6e1f8df240/odoo_addon_mis_builder-17.0.1.0.0.7-py3-none-any.whl", hash = "sha256:d0fadfa8d196f95655dbbe3aec1f24cec51d71b0a7889c9b008706f6a0d4ba92", size = 596851 },
+]
+
+[[package]]
+name = "odoo-addon-mis-builder-budget"
+version = "17.0.1.0.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "odoo" },
+    { name = "odoo-addon-mis-builder" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f5/c6/9f561875323c10733e3255652d51eefa38f8c506bb3aeae01c2ee2d65a3d/odoo_addon_mis_builder_budget-17.0.1.0.0.6-py3-none-any.whl", hash = "sha256:f2cea63bbdc25515e4e652afbca40d6f4122ebbd138bdac90f1625f0e43b5971", size = 83303 },
 ]
 
 [[package]]

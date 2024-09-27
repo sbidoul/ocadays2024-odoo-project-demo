@@ -27,3 +27,8 @@ addons manifests.
 In this level, `pyproject.toml` uses
 [hatch-odoo](https://github.com/acsone/hatch-odoo/) to collect dependencies
 dynamically from the `depends` sections of Odoo addons manifests.
+
+## Level 5
+
+In this level we update a dependency in an addon manifest, and update the lock
+file with `uv run odoo`.
