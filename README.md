@@ -16,3 +16,11 @@ It is interesting to note that the Odoo addons path that is shown on Odoo startu
 - `/var/lib/odoo/addons/17.0`: addons in Odoo's data dir
 - `/mnt/extra-addons`: addons that can be mounted (from `/etc/odoo/odoo.conf`),
   as described in the official Odoo docker image documentation.
+
+# Level 2
+
+In this level, we add a devcontainer configuration.
+
+This configuration was added using the Visual Studio Code wizard, using the
+`docker-compose.yml` mode, then adding the python vscode extension in
+`devcontainer.json`, doing some minor tweaks.

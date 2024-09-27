@@ -1,0 +1,38 @@
+services:
+  # Update this to the name of the service you want to work with in your docker-compose.yml file
+  web:
+    # Uncomment if you want to override the service's Dockerfile to one in the .devcontainer 
+    # folder. Note that the path of the Dockerfile and context is relative to the *primary* 
+    # docker-compose.yml file (the first in the devcontainer.json "dockerComposeFile"
+    # array). The sample below assumes your primary file is in the root of your project.
+    #
+
+    # ADDED: set environment variables that are normally set by the base image entrypoint
+    environment:
+      - PGHOST=db
+      - PGUSER=odoo
+      - PGPASSWORD=odoo
+      - SHELL=/bin/bash # because the odoo user has the nologin shell
+    # /ADDED
+
+    volumes:
+      # Update this to wherever you want VS Code to mount the folder of your project
+      - ..:/workspaces:cached
+      # ADDED
+      # Use a dedicated volume for the dev container, because
+      # we are going to run with the UID of the host user, which is different
+      # than the UID of the odoo user in the container.
+      - ocadays2024-odoo-data-devcontainer:/var/lib/odoo
+      # /ADDED
+
+    # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
+    # cap_add:
+    #   - SYS_PTRACE
+    # security_opt:
+    #   - seccomp:unconfined
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+volumes:
+  ocadays2024-odoo-data-devcontainer:
