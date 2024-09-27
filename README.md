@@ -32,3 +32,8 @@ dynamically from the `depends` sections of Odoo addons manifests.
 
 In this level we update a dependency in an addon manifest, and update the lock
 file with `uv run odoo`.
+
+## Level 6
+
+We can also add external dependencies in manifests. `uv run odoo` installs them
+and adds them to the lock file.

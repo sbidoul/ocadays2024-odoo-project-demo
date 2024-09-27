@@ -4,4 +4,7 @@
     "depends": [
         "mis_builder_budget",
     ],
+    "external_dependencies": {
+        "python": ["pydantic>=2"],
+    }
 }
