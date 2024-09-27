@@ -525,7 +525,7 @@ wheels = [
 [[package]]
 name = "ocadays202-uv-demo"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "lxml", extra = ["html-clean"] },
     { name = "odoo" },
@@ -538,7 +538,7 @@ dependencies = [
 requires-dist = [
     { name = "lxml", extras = ["html-clean"], specifier = ">=5.2" },
     { name = "odoo", git = "https://github.com/OCA/OCB?branch=17.0" },
-    { name = "odoo-addon-mis-builder" },
+    { name = "odoo-addon-mis-builder", specifier = ">=17.0.dev0,<17.1.dev0" },
     { name = "setuptools", specifier = "<71" },
     { name = "werkzeug", specifier = "==3.0.*" },
 ]

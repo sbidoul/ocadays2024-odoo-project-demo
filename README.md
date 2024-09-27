@@ -21,3 +21,9 @@ In this level, we add an OCA addon to the project dependencies in
 `pyproject.toml`. This is simple and does not require additional tooling. The
 downside is that dependencies must be synchronized between `pyproject.toml` and
 addons manifests.
+
+## Level 4
+
+In this level, `pyproject.toml` uses
+[hatch-odoo](https://github.com/acsone/hatch-odoo/) to collect dependencies
+dynamically from the `depends` sections of Odoo addons manifests.
