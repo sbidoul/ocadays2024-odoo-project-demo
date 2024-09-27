@@ -10,6 +10,8 @@ dependencies = [
     "lxml[html_clean]>=5.2",
     "setuptools<71",
     "werkzeug==3.0.*",
+    # OCA addons
+    "odoo-addon-mis_builder",
 ]
 
 [tool.uv.sources]

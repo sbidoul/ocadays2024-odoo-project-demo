@@ -529,6 +529,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "lxml", extra = ["html-clean"] },
     { name = "odoo" },
+    { name = "odoo-addon-mis-builder" },
     { name = "setuptools" },
     { name = "werkzeug" },
 ]
@@ -537,6 +538,7 @@ dependencies = [
 requires-dist = [
     { name = "lxml", extras = ["html-clean"], specifier = ">=5.2" },
     { name = "odoo", git = "https://github.com/OCA/OCB?branch=17.0" },
+    { name = "odoo-addon-mis-builder" },
     { name = "setuptools", specifier = "<71" },
     { name = "werkzeug", specifier = "==3.0.*" },
 ]
@@ -585,6 +587,43 @@ dependencies = [
     { name = "xlsxwriter" },
     { name = "xlwt" },
     { name = "zeep" },
+]
+
+[[package]]
+name = "odoo-addon-date-range"
+version = "17.0.1.2.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "odoo" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/a5/c4b739ceb554f0774e554549a395179968e1581b04db71ed7b95a2817727/odoo_addon_date_range-17.0.1.2.0.2-py3-none-any.whl", hash = "sha256:6145218cf270b119c405ba123b4633127055983f91bbb87885127d00e0fa5f5a", size = 2301509 },
+]
+
+[[package]]
+name = "odoo-addon-mis-builder"
+version = "17.0.1.0.0.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "odoo" },
+    { name = "odoo-addon-date-range" },
+    { name = "odoo-addon-report-xlsx" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ba/e5/de4c9e35308b46ebbef2de6766c0ba7d917977201732ba87ba6e1f8df240/odoo_addon_mis_builder-17.0.1.0.0.7-py3-none-any.whl", hash = "sha256:d0fadfa8d196f95655dbbe3aec1f24cec51d71b0a7889c9b008706f6a0d4ba92", size = 596851 },
+]
+
+[[package]]
+name = "odoo-addon-report-xlsx"
+version = "17.0.1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "odoo" },
+    { name = "xlrd" },
+    { name = "xlsxwriter" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f6/0c/1bdf590834d5f028580dc2d4f4129854b256dc8acdac805bf56089a342e9/odoo_addon_report_xlsx-17.0.1.0.1-py3-none-any.whl", hash = "sha256:7efa8631b29e768af5e1007ca1ce8fd204d2f688217619a85443302617ed65e1", size = 46231 },
 ]
 
 [[package]]

@@ -14,3 +14,10 @@ but subsequent runs are fast, even when updating Odoo.
 
 In this level, we just commit the `uv.lock` file that was generated
 with `uv run odoo`, or `uv sync` or `uv lock`.
+
+## Level 3
+
+In this level, we add an OCA addon to the project dependencies in
+`pyproject.toml`. This is simple and does not require additional tooling. The
+downside is that dependencies must be synchronized between `pyproject.toml` and
+addons manifests.
