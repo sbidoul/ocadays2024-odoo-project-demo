@@ -1,0 +1,16 @@
+[project]
+name = "ocadays202-uv-demo"
+version = "0.1.0"
+description = "OCA Days 2024 Odoo with uv demo"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "odoo==17.0.*",
+    # Add some constraints to Odoo deps that should be in their setup.py
+    "lxml[html_clean]>=5.2",
+    "setuptools<71",
+    "werkzeug==3.0.*",
+]
+
+[tool.uv.sources]
+odoo = { git = "https://github.com/OCA/OCB", branch = "17.0" }
