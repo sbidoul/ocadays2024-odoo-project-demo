@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+      - kwkhtmltopdf
+    ports:
+      - "8069:8069"
+    volumes:
+      - ocadays2024-uv-odoo-data:/data/odoo
+    environment:
+      - DB_HOST=db
+      - DB_USER=odoo
+      - DB_PASSWORD=odoo
+      - DB_NAME=odoo
+  db:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    volumes:
+      - ocadays2024-uv-db-data:/var/lib/postgresql/data
+  kwkhtmltopdf:
+    image: ghcr.io/acsone/kwkhtmltopdf:0.12.5-latest
+volumes:
+  ocadays2024-uv-odoo-data:
+  ocadays2024-uv-db-data:

@@ -42,3 +42,9 @@ and adds them to the lock file.
 
 To use an unmerged OCA pull request, we can simply add it to `[tool.uv.sources]`
 in `pyproject.toml`.
+
+## Level 8
+
+Here we add a multi-stage production grade `Dockerfile` based on the
+[odoo-bedrock](https://github.com/acsone/odoo-bedrock/) image, as well as a
+basic `docker-compose.yml`.
