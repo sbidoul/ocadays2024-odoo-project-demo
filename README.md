@@ -37,3 +37,8 @@ Notice it is not necessary to change the addons path, when launching odoo with
 `python3 -m odoo` from the workspace root, because python inserts the local
 directory in sys.path, so the `odoo/addons` directory in the workspace is picked
 up automatically.
+
+# Level 4
+
+In this level, we add an unmerged version of `mis_builder_budget`, from an open
+pull request in `requirements.in`, and pin it the `requirements.txt`.
