@@ -1,4 +1,4 @@
-FROM odoo:17
+FROM odoo:17 AS base
 
 USER root
 
@@ -10,3 +10,7 @@ RUN --mount=type=bind,source=./requirements.in,target=/requirements.in \
    pip install -r /requirements.in
 
 USER odoo
+
+FROM base AS runtime
+
+COPY ./odoo/addons /mnt/extra-addons

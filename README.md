@@ -24,3 +24,16 @@ In this level, we add a devcontainer configuration.
 This configuration was added using the Visual Studio Code wizard, using the
 `docker-compose.yml` mode, then adding the python vscode extension in
 `devcontainer.json`, doing some minor tweaks.
+
+# Level 3
+
+In this level, we add custom addons, in the `odoo/addons` directory.
+
+We also add a runtime layer that adds these addons to `/mnt/addons`,
+and update the devcontainer configuration to user the base layer,
+since in development mode, our custom addons are mounted in the workspace.
+
+Notice it is not necessary to change the addons path, when launching odoo with
+`python3 -m odoo` from the workspace root, because python inserts the local
+directory in sys.path, so the `odoo/addons` directory in the workspace is picked
+up automatically.
