@@ -1,0 +1,4 @@
+odoo-addon-date_range==17.0.1.2.0.2
+odoo-addon-mis_builder==17.0.1.0.0.7
+odoo-addon-mis_builder_budget @ git+https://github.com/OCA/mis-builder.git@aadbdfc50334a19890e44e66c88fd510a1de6c3b#subdirectory=mis_builder_budget
+odoo-addon-report_xlsx==17.0.1.0.1

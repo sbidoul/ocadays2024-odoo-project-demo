@@ -42,3 +42,15 @@ up automatically.
 
 In this level, we add an unmerged version of `mis_builder_budget`, from an open
 pull request in `requirements.in`, and pin it the `requirements.txt`.
+
+# Level 4
+
+In this level we pin dependencies to `requirements.txt` using the following command: 
+
+```bash
+docker compose build && \
+docker compose run --rm --no-deps web \
+  python3 -m pip freeze --path /usr/local/lib/python3.10/dist-packages > requirements.txt
+```
+
+and we use the pinned dependencies in the Dockerfile, for reproducibility.
