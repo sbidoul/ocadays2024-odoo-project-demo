@@ -8,6 +8,8 @@ services:
       - "8069:8069"
     volumes:
       - ocadays2024-uv-odoo-data:/data/odoo
+    env_file:
+      - .env
     environment:
       - DB_HOST=db
       - DB_USER=odoo

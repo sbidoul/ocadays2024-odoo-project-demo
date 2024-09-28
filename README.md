@@ -48,3 +48,7 @@ in `pyproject.toml`.
 Here we add a multi-stage production grade `Dockerfile` based on the
 [odoo-bedrock](https://github.com/acsone/odoo-bedrock/) image, as well as a
 basic `docker-compose.yml`.
+
+## Level 9
+
+In this last step, we add a dev container.
