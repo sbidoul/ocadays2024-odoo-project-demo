@@ -37,3 +37,8 @@ file with `uv run odoo`.
 
 We can also add external dependencies in manifests. `uv run odoo` installs them
 and adds them to the lock file.
+
+## Level 7
+
+To use an unmerged OCA pull request, we can simply add it to `[tool.uv.sources]`
+in `pyproject.toml`.
